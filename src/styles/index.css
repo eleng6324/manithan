@@ -1,0 +1,93 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070f08;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a7c59;
+  border: 1px solid #8cd49c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8cd49c;
+}
+
+/* Selection color */
+::selection {
+  background: #4a7c59;
+  color: #f0c060;
+}
+
+/* Firefly animation */
+@keyframes firefly {
+  0%, 100% { opacity: 0; transform: translate(0, 0) scale(1); }
+  25% { opacity: 1; transform: translate(20px, -30px) scale(1.2); }
+  50% { opacity: 0.8; transform: translate(-15px, -60px) scale(0.9); }
+  75% { opacity: 1; transform: translate(30px, -40px) scale(1.1); }
+}
+
+@keyframes fireflyGlow {
+  0%, 100% { box-shadow: 0 0 4px 2px #8cd49c, 0 0 8px 4px rgba(140,212,156,0.4); }
+  50% { box-shadow: 0 0 8px 4px #f0c060, 0 0 16px 8px rgba(240,192,96,0.3); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 10px #f0c060, 0 0 20px #f0c060, 0 0 40px #f0c06080; }
+  50% { text-shadow: 0 0 20px #f0c060, 0 0 40px #f0c060, 0 0 80px #f0c060, 0 0 100px #f0c06060; }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes pixelBorderGlow {
+  0%, 100% { border-color: #4a7c59; box-shadow: 0 0 0 0 transparent; }
+  50% { border-color: #8cd49c; box-shadow: 0 0 10px 2px rgba(140, 212, 156, 0.3); }
+}
+
+/* Pixel font utilities */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive;
+}
+.font-vt323 {
+  font-family: 'VT323', monospace;
+}
+
+/* Pixel border corners */
+.pixel-border {
+  border: 2px solid #4a7c59;
+  position: relative;
+}
+
+/* Pixel grass */
+@keyframes grassSway {
+  0%, 100% { transform: skewX(0deg); }
+  50% { transform: skewX(2deg); }
+}
